@@ -273,7 +273,7 @@ def start_command(message):
     myinfo_button = types.KeyboardButton("👤 My Info")
     redeem_button = types.KeyboardButton("🎟️ Redeem Key")
     markup.add(attack_button, myinfo_button, redeem_button)
-    bot.reply_to(message, "𝗪𝗲𝗹𝗰𝗼𝗺𝗲 𝘁𝗼 𝗺𝗲𝗴𝗼𝘅𝗲𝗿 𝗯𝗼𝘁!", reply_markup=markup)
+    bot.reply_to(message, "𝗪𝗘𝗟𝗖𝗢𝗠𝗘 𝗧𝗢 𝗥𝗜𝗬𝗔𝗭 𝗩𝗜𝗣 𝗗𝗗𝗢𝗦!", reply_markup=markup)
 
 COOLDOWN_PERIOD = 5 * 60  # 5 minutes
 
@@ -318,8 +318,8 @@ def process_attack_details(message):
         try:
             port = int(details[1])
             time = int(details[2])
-            if time > 240:
-                response = "❗️𝗘𝗿𝗿𝗼𝗿: 𝘂𝘀𝗲 𝗹𝗲𝘀𝘀𝘁𝗵𝗲𝗻 240 𝘀𝗲𝗰𝗼𝗻𝗱𝘀❗️"
+            if time > 120:
+                response = "❗️𝗘𝗿𝗿𝗼𝗿: 𝘂𝘀𝗲 𝗹𝗲𝘀𝘀𝘁𝗵𝗲𝗻 120 𝘀𝗲𝗰𝗼𝗻𝗱𝘀❗️"
             else:
                 # Record and log the attack
                 record_command_logs(user_id, 'attack', target, port, time)
