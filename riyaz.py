@@ -318,8 +318,8 @@ def process_attack_details(message):
         try:
             port = int(details[1])
             time = int(details[2])
-            if time > 120:
-                response = "❗️𝗘𝗿𝗿𝗼𝗿: 𝘂𝘀𝗲 𝗹𝗲𝘀𝘀𝘁𝗵𝗲𝗻 120 𝘀𝗲𝗰𝗼𝗻𝗱𝘀❗️"
+            if time > 300:
+                response = "❗️𝗘𝗿𝗿𝗼𝗿: 𝘂𝘀𝗲 𝗹𝗲𝘀𝘀𝘁𝗵𝗲𝗻 300 𝘀𝗲𝗰𝗼𝗻𝗱𝘀❗️"
             else:
                 # Record and log the attack
                 record_command_logs(user_id, 'attack', target, port, time)
